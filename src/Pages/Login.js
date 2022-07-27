@@ -1,0 +1,38 @@
+import { Link } from "react-router-dom";
+function Login() {
+  return (
+    <div className="flex justify-center">
+      <div className="w-2/5 bg-white mt-10 p-4">
+        <div className="text-center py-3">
+          <h2 className="font-bold">Welcome back!😊</h2>
+          <h2 className="text-sm text-gray-400">Log right back in!</h2>
+        </div>
+        <div className="w-4/5 m-auto space-y-2">
+          <input
+            type="text"
+            className="p-3 bg-gray-100 rounded-md text-sm w-full"
+            placeholder="Enter your email"
+          />
+          <input
+            type="password"
+            className="p-3 bg-gray-100 rounded-md text-sm w-full"
+            placeholder="Password"
+          />
+          <p className="text-sm text-gray-400">
+            You dont have an account?{" "}
+            <Link to="/signup" className="text-black font-bold">
+              Create Account
+            </Link>
+          </p>
+          <div className="py-2">
+            <button className="bg-black w-full p-2 rounded-md text-white ">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
